@@ -12,6 +12,7 @@ const Signup = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
