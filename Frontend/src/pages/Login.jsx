@@ -18,7 +18,7 @@ const Login = () => {
     setError('');
     try {
       // Connects directly to our Step 4 backend endpoint
-      const res = await axios.post('http://localhost:8080/api/auth/login', formData);
+      const res = await axios.post(`${API_BASE_URL}/api/auth/login`, formData);      
       login(res.data.user, res.data.token);
       navigate('/dashboard');
     } catch (err) {
